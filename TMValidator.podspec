@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   #s.description  = <<-DESC
   #                   DESC
 
-  s.homepage     = "https://github.com/timers-inc/TMValidator"
+  s.homepage     = "https://github.com/fromkk/TMValidator"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/timers-inc/TMValidator.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/fromkk/TMValidator.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
