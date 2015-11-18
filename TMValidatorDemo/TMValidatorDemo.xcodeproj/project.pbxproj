@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F5890931BFC17F200352003 /* TMValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5890921BFC17F200352003 /* TMValidatorTests.m */; };
+		4F58909C1BFC2AE200352003 /* TMValidatorRuleURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F58909B1BFC2AE200352003 /* TMValidatorRuleURL.m */; };
+		4FAD4F351BFC08F200E5A736 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F341BFC08F200E5A736 /* main.m */; };
+		4FAD4F381BFC08F200E5A736 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F371BFC08F200E5A736 /* AppDelegate.m */; };
+		4FAD4F3B1BFC08F200E5A736 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F3A1BFC08F200E5A736 /* ViewController.m */; };
+		4FAD4F3E1BFC08F200E5A736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD4F3C1BFC08F200E5A736 /* Main.storyboard */; };
+		4FAD4F401BFC08F200E5A736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD4F3F1BFC08F200E5A736 /* Assets.xcassets */; };
+		4FAD4F431BFC08F200E5A736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD4F411BFC08F200E5A736 /* LaunchScreen.storyboard */; };
+		4FAD4F4E1BFC08F300E5A736 /* TMValidatorDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F4D1BFC08F300E5A736 /* TMValidatorDemoTests.m */; };
+		4FAD4F831BFC092A00E5A736 /* TMValidatorError.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD4F591BFC092A00E5A736 /* TMValidatorError.strings */; };
+		4FAD4F841BFC092A00E5A736 /* TMValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F5D1BFC092A00E5A736 /* TMValidateTextField.m */; };
+		4FAD4F851BFC092A00E5A736 /* TMValidateTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F5F1BFC092A00E5A736 /* TMValidateTextView.m */; };
+		4FAD4F861BFC092A00E5A736 /* TMValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F611BFC092A00E5A736 /* TMValidator.m */; };
+		4FAD4F871BFC092A00E5A736 /* TMValidatorField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F641BFC092A00E5A736 /* TMValidatorField.m */; };
+		4FAD4F881BFC092A00E5A736 /* TMValidatorRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F661BFC092A00E5A736 /* TMValidatorRule.m */; };
+		4FAD4F891BFC092A00E5A736 /* TMValidatorRuleEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F681BFC092A00E5A736 /* TMValidatorRuleEmail.m */; };
+		4FAD4F8A1BFC092A00E5A736 /* TMValidatorRuleExactLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F6A1BFC092A00E5A736 /* TMValidatorRuleExactLength.m */; };
+		4FAD4F8B1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F6C1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.m */; };
+		4FAD4F8C1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F6E1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.m */; };
+		4FAD4F8D1BFC092A00E5A736 /* TMValidatorRuleIsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F701BFC092A00E5A736 /* TMValidatorRuleIsEmpty.m */; };
+		4FAD4F8E1BFC092A00E5A736 /* TMValidatorRuleIsNumeric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F721BFC092A00E5A736 /* TMValidatorRuleIsNumeric.m */; };
+		4FAD4F8F1BFC092A00E5A736 /* TMValidatorRuleMatchPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F741BFC092A00E5A736 /* TMValidatorRuleMatchPattern.m */; };
+		4FAD4F901BFC092A00E5A736 /* TMValidatorRuleMatchValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F761BFC092A00E5A736 /* TMValidatorRuleMatchValue.m */; };
+		4FAD4F911BFC092A00E5A736 /* TMValidatorRuleMaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F781BFC092A00E5A736 /* TMValidatorRuleMaxLength.m */; };
+		4FAD4F921BFC092A00E5A736 /* TMValidatorRuleMinLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F7A1BFC092A00E5A736 /* TMValidatorRuleMinLength.m */; };
+		4FAD4F931BFC092A00E5A736 /* TMValidatorRuleNumericBetween.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F7C1BFC092A00E5A736 /* TMValidatorRuleNumericBetween.m */; };
+		4FAD4F941BFC092A00E5A736 /* TMValidatorRuleNumericMax.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F7E1BFC092A00E5A736 /* TMValidatorRuleNumericMax.m */; };
+		4FAD4F951BFC092A00E5A736 /* TMValidatorRuleNumericMin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F801BFC092A00E5A736 /* TMValidatorRuleNumericMin.m */; };
+		4FAD4F961BFC092A00E5A736 /* TMValidatorRuleRequired.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD4F821BFC092A00E5A736 /* TMValidatorRuleRequired.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F5890951BFC17F200352003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAD4F281BFC08F200E5A736 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FAD4F2F1BFC08F200E5A736;
+			remoteInfo = TMValidatorDemo;
+		};
+		4FAD4F4A1BFC08F300E5A736 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAD4F281BFC08F200E5A736 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FAD4F2F1BFC08F200E5A736;
+			remoteInfo = TMValidatorDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F5890901BFC17F200352003 /* TMValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5890921BFC17F200352003 /* TMValidatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMValidatorTests.m; sourceTree = "<group>"; };
+		4F5890941BFC17F200352003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F58909A1BFC2AE200352003 /* TMValidatorRuleURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleURL.h; sourceTree = "<group>"; };
+		4F58909B1BFC2AE200352003 /* TMValidatorRuleURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleURL.m; sourceTree = "<group>"; };
+		4FAD4F301BFC08F200E5A736 /* TMValidatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMValidatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FAD4F341BFC08F200E5A736 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FAD4F361BFC08F200E5A736 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4FAD4F371BFC08F200E5A736 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4FAD4F391BFC08F200E5A736 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4FAD4F3A1BFC08F200E5A736 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4FAD4F3D1BFC08F200E5A736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FAD4F3F1BFC08F200E5A736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FAD4F421BFC08F200E5A736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FAD4F441BFC08F200E5A736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FAD4F491BFC08F300E5A736 /* TMValidatorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMValidatorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FAD4F4D1BFC08F300E5A736 /* TMValidatorDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMValidatorDemoTests.m; sourceTree = "<group>"; };
+		4FAD4F4F1BFC08F300E5A736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FAD4F5A1BFC092A00E5A736 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TMValidatorError.strings; sourceTree = "<group>"; };
+		4FAD4F5B1BFC092A00E5A736 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TMValidatorError.strings; sourceTree = "<group>"; };
+		4FAD4F5C1BFC092A00E5A736 /* TMValidateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidateTextField.h; sourceTree = "<group>"; };
+		4FAD4F5D1BFC092A00E5A736 /* TMValidateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidateTextField.m; sourceTree = "<group>"; };
+		4FAD4F5E1BFC092A00E5A736 /* TMValidateTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidateTextView.h; sourceTree = "<group>"; };
+		4FAD4F5F1BFC092A00E5A736 /* TMValidateTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidateTextView.m; sourceTree = "<group>"; };
+		4FAD4F601BFC092A00E5A736 /* TMValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidator.h; sourceTree = "<group>"; };
+		4FAD4F611BFC092A00E5A736 /* TMValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidator.m; sourceTree = "<group>"; };
+		4FAD4F621BFC092A00E5A736 /* TMValidatorCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorCommon.h; sourceTree = "<group>"; };
+		4FAD4F631BFC092A00E5A736 /* TMValidatorField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorField.h; sourceTree = "<group>"; };
+		4FAD4F641BFC092A00E5A736 /* TMValidatorField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorField.m; sourceTree = "<group>"; };
+		4FAD4F651BFC092A00E5A736 /* TMValidatorRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRule.h; sourceTree = "<group>"; };
+		4FAD4F661BFC092A00E5A736 /* TMValidatorRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRule.m; sourceTree = "<group>"; };
+		4FAD4F671BFC092A00E5A736 /* TMValidatorRuleEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleEmail.h; sourceTree = "<group>"; };
+		4FAD4F681BFC092A00E5A736 /* TMValidatorRuleEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleEmail.m; sourceTree = "<group>"; };
+		4FAD4F691BFC092A00E5A736 /* TMValidatorRuleExactLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleExactLength.h; sourceTree = "<group>"; };
+		4FAD4F6A1BFC092A00E5A736 /* TMValidatorRuleExactLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleExactLength.m; sourceTree = "<group>"; };
+		4FAD4F6B1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleIsAlnum.h; sourceTree = "<group>"; };
+		4FAD4F6C1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleIsAlnum.m; sourceTree = "<group>"; };
+		4FAD4F6D1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleIsAlphabet.h; sourceTree = "<group>"; };
+		4FAD4F6E1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleIsAlphabet.m; sourceTree = "<group>"; };
+		4FAD4F6F1BFC092A00E5A736 /* TMValidatorRuleIsEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleIsEmpty.h; sourceTree = "<group>"; };
+		4FAD4F701BFC092A00E5A736 /* TMValidatorRuleIsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleIsEmpty.m; sourceTree = "<group>"; };
+		4FAD4F711BFC092A00E5A736 /* TMValidatorRuleIsNumeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleIsNumeric.h; sourceTree = "<group>"; };
+		4FAD4F721BFC092A00E5A736 /* TMValidatorRuleIsNumeric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleIsNumeric.m; sourceTree = "<group>"; };
+		4FAD4F731BFC092A00E5A736 /* TMValidatorRuleMatchPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleMatchPattern.h; sourceTree = "<group>"; };
+		4FAD4F741BFC092A00E5A736 /* TMValidatorRuleMatchPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleMatchPattern.m; sourceTree = "<group>"; };
+		4FAD4F751BFC092A00E5A736 /* TMValidatorRuleMatchValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleMatchValue.h; sourceTree = "<group>"; };
+		4FAD4F761BFC092A00E5A736 /* TMValidatorRuleMatchValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleMatchValue.m; sourceTree = "<group>"; };
+		4FAD4F771BFC092A00E5A736 /* TMValidatorRuleMaxLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleMaxLength.h; sourceTree = "<group>"; };
+		4FAD4F781BFC092A00E5A736 /* TMValidatorRuleMaxLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleMaxLength.m; sourceTree = "<group>"; };
+		4FAD4F791BFC092A00E5A736 /* TMValidatorRuleMinLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleMinLength.h; sourceTree = "<group>"; };
+		4FAD4F7A1BFC092A00E5A736 /* TMValidatorRuleMinLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleMinLength.m; sourceTree = "<group>"; };
+		4FAD4F7B1BFC092A00E5A736 /* TMValidatorRuleNumericBetween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleNumericBetween.h; sourceTree = "<group>"; };
+		4FAD4F7C1BFC092A00E5A736 /* TMValidatorRuleNumericBetween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleNumericBetween.m; sourceTree = "<group>"; };
+		4FAD4F7D1BFC092A00E5A736 /* TMValidatorRuleNumericMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleNumericMax.h; sourceTree = "<group>"; };
+		4FAD4F7E1BFC092A00E5A736 /* TMValidatorRuleNumericMax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleNumericMax.m; sourceTree = "<group>"; };
+		4FAD4F7F1BFC092A00E5A736 /* TMValidatorRuleNumericMin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleNumericMin.h; sourceTree = "<group>"; };
+		4FAD4F801BFC092A00E5A736 /* TMValidatorRuleNumericMin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleNumericMin.m; sourceTree = "<group>"; };
+		4FAD4F811BFC092A00E5A736 /* TMValidatorRuleRequired.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMValidatorRuleRequired.h; sourceTree = "<group>"; };
+		4FAD4F821BFC092A00E5A736 /* TMValidatorRuleRequired.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidatorRuleRequired.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F58908D1BFC17F200352003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAD4F2D1BFC08F200E5A736 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAD4F461BFC08F300E5A736 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F5890911BFC17F200352003 /* TMValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F5890921BFC17F200352003 /* TMValidatorTests.m */,
+				4F5890941BFC17F200352003 /* Info.plist */,
+			);
+			path = TMValidatorTests;
+			sourceTree = "<group>";
+		};
+		4FAD4F271BFC08F200E5A736 = {
+			isa = PBXGroup;
+			children = (
+				4FAD4F581BFC092A00E5A736 /* TMValidator */,
+				4FAD4F321BFC08F200E5A736 /* TMValidatorDemo */,
+				4FAD4F4C1BFC08F300E5A736 /* TMValidatorDemoTests */,
+				4F5890911BFC17F200352003 /* TMValidatorTests */,
+				4FAD4F311BFC08F200E5A736 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FAD4F311BFC08F200E5A736 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FAD4F301BFC08F200E5A736 /* TMValidatorDemo.app */,
+				4FAD4F491BFC08F300E5A736 /* TMValidatorDemoTests.xctest */,
+				4F5890901BFC17F200352003 /* TMValidatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FAD4F321BFC08F200E5A736 /* TMValidatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4FAD4F361BFC08F200E5A736 /* AppDelegate.h */,
+				4FAD4F371BFC08F200E5A736 /* AppDelegate.m */,
+				4FAD4F391BFC08F200E5A736 /* ViewController.h */,
+				4FAD4F3A1BFC08F200E5A736 /* ViewController.m */,
+				4FAD4F3C1BFC08F200E5A736 /* Main.storyboard */,
+				4FAD4F3F1BFC08F200E5A736 /* Assets.xcassets */,
+				4FAD4F411BFC08F200E5A736 /* LaunchScreen.storyboard */,
+				4FAD4F441BFC08F200E5A736 /* Info.plist */,
+				4FAD4F331BFC08F200E5A736 /* Supporting Files */,
+			);
+			path = TMValidatorDemo;
+			sourceTree = "<group>";
+		};
+		4FAD4F331BFC08F200E5A736 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FAD4F341BFC08F200E5A736 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FAD4F4C1BFC08F300E5A736 /* TMValidatorDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FAD4F4D1BFC08F300E5A736 /* TMValidatorDemoTests.m */,
+				4FAD4F4F1BFC08F300E5A736 /* Info.plist */,
+			);
+			path = TMValidatorDemoTests;
+			sourceTree = "<group>";
+		};
+		4FAD4F581BFC092A00E5A736 /* TMValidator */ = {
+			isa = PBXGroup;
+			children = (
+				4FAD4F591BFC092A00E5A736 /* TMValidatorError.strings */,
+				4FAD4F5C1BFC092A00E5A736 /* TMValidateTextField.h */,
+				4FAD4F5D1BFC092A00E5A736 /* TMValidateTextField.m */,
+				4FAD4F5E1BFC092A00E5A736 /* TMValidateTextView.h */,
+				4FAD4F5F1BFC092A00E5A736 /* TMValidateTextView.m */,
+				4FAD4F601BFC092A00E5A736 /* TMValidator.h */,
+				4FAD4F611BFC092A00E5A736 /* TMValidator.m */,
+				4FAD4F621BFC092A00E5A736 /* TMValidatorCommon.h */,
+				4FAD4F631BFC092A00E5A736 /* TMValidatorField.h */,
+				4FAD4F641BFC092A00E5A736 /* TMValidatorField.m */,
+				4FAD4F651BFC092A00E5A736 /* TMValidatorRule.h */,
+				4FAD4F661BFC092A00E5A736 /* TMValidatorRule.m */,
+				4FAD4F671BFC092A00E5A736 /* TMValidatorRuleEmail.h */,
+				4FAD4F681BFC092A00E5A736 /* TMValidatorRuleEmail.m */,
+				4F58909A1BFC2AE200352003 /* TMValidatorRuleURL.h */,
+				4F58909B1BFC2AE200352003 /* TMValidatorRuleURL.m */,
+				4FAD4F691BFC092A00E5A736 /* TMValidatorRuleExactLength.h */,
+				4FAD4F6A1BFC092A00E5A736 /* TMValidatorRuleExactLength.m */,
+				4FAD4F6B1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.h */,
+				4FAD4F6C1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.m */,
+				4FAD4F6D1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.h */,
+				4FAD4F6E1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.m */,
+				4FAD4F6F1BFC092A00E5A736 /* TMValidatorRuleIsEmpty.h */,
+				4FAD4F701BFC092A00E5A736 /* TMValidatorRuleIsEmpty.m */,
+				4FAD4F711BFC092A00E5A736 /* TMValidatorRuleIsNumeric.h */,
+				4FAD4F721BFC092A00E5A736 /* TMValidatorRuleIsNumeric.m */,
+				4FAD4F731BFC092A00E5A736 /* TMValidatorRuleMatchPattern.h */,
+				4FAD4F741BFC092A00E5A736 /* TMValidatorRuleMatchPattern.m */,
+				4FAD4F751BFC092A00E5A736 /* TMValidatorRuleMatchValue.h */,
+				4FAD4F761BFC092A00E5A736 /* TMValidatorRuleMatchValue.m */,
+				4FAD4F771BFC092A00E5A736 /* TMValidatorRuleMaxLength.h */,
+				4FAD4F781BFC092A00E5A736 /* TMValidatorRuleMaxLength.m */,
+				4FAD4F791BFC092A00E5A736 /* TMValidatorRuleMinLength.h */,
+				4FAD4F7A1BFC092A00E5A736 /* TMValidatorRuleMinLength.m */,
+				4FAD4F7B1BFC092A00E5A736 /* TMValidatorRuleNumericBetween.h */,
+				4FAD4F7C1BFC092A00E5A736 /* TMValidatorRuleNumericBetween.m */,
+				4FAD4F7D1BFC092A00E5A736 /* TMValidatorRuleNumericMax.h */,
+				4FAD4F7E1BFC092A00E5A736 /* TMValidatorRuleNumericMax.m */,
+				4FAD4F7F1BFC092A00E5A736 /* TMValidatorRuleNumericMin.h */,
+				4FAD4F801BFC092A00E5A736 /* TMValidatorRuleNumericMin.m */,
+				4FAD4F811BFC092A00E5A736 /* TMValidatorRuleRequired.h */,
+				4FAD4F821BFC092A00E5A736 /* TMValidatorRuleRequired.m */,
+			);
+			name = TMValidator;
+			path = ../TMValidator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F58908F1BFC17F200352003 /* TMValidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5890971BFC17F200352003 /* Build configuration list for PBXNativeTarget "TMValidatorTests" */;
+			buildPhases = (
+				4F58908C1BFC17F200352003 /* Sources */,
+				4F58908D1BFC17F200352003 /* Frameworks */,
+				4F58908E1BFC17F200352003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F5890961BFC17F200352003 /* PBXTargetDependency */,
+			);
+			name = TMValidatorTests;
+			productName = TMValidatorTests;
+			productReference = 4F5890901BFC17F200352003 /* TMValidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4FAD4F2F1BFC08F200E5A736 /* TMValidatorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FAD4F521BFC08F300E5A736 /* Build configuration list for PBXNativeTarget "TMValidatorDemo" */;
+			buildPhases = (
+				4FAD4F2C1BFC08F200E5A736 /* Sources */,
+				4FAD4F2D1BFC08F200E5A736 /* Frameworks */,
+				4FAD4F2E1BFC08F200E5A736 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMValidatorDemo;
+			productName = TMValidatorDemo;
+			productReference = 4FAD4F301BFC08F200E5A736 /* TMValidatorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FAD4F481BFC08F300E5A736 /* TMValidatorDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FAD4F551BFC08F300E5A736 /* Build configuration list for PBXNativeTarget "TMValidatorDemoTests" */;
+			buildPhases = (
+				4FAD4F451BFC08F300E5A736 /* Sources */,
+				4FAD4F461BFC08F300E5A736 /* Frameworks */,
+				4FAD4F471BFC08F300E5A736 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FAD4F4B1BFC08F300E5A736 /* PBXTargetDependency */,
+			);
+			name = TMValidatorDemoTests;
+			productName = TMValidatorDemoTests;
+			productReference = 4FAD4F491BFC08F300E5A736 /* TMValidatorDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FAD4F281BFC08F200E5A736 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Timers Inc.";
+				TargetAttributes = {
+					4F58908F1BFC17F200352003 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 4FAD4F2F1BFC08F200E5A736;
+					};
+					4FAD4F2F1BFC08F200E5A736 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					4FAD4F481BFC08F300E5A736 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 4FAD4F2F1BFC08F200E5A736;
+					};
+				};
+			};
+			buildConfigurationList = 4FAD4F2B1BFC08F200E5A736 /* Build configuration list for PBXProject "TMValidatorDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 4FAD4F271BFC08F200E5A736;
+			productRefGroup = 4FAD4F311BFC08F200E5A736 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FAD4F2F1BFC08F200E5A736 /* TMValidatorDemo */,
+				4FAD4F481BFC08F300E5A736 /* TMValidatorDemoTests */,
+				4F58908F1BFC17F200352003 /* TMValidatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F58908E1BFC17F200352003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAD4F2E1BFC08F200E5A736 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAD4F431BFC08F200E5A736 /* LaunchScreen.storyboard in Resources */,
+				4FAD4F831BFC092A00E5A736 /* TMValidatorError.strings in Resources */,
+				4FAD4F401BFC08F200E5A736 /* Assets.xcassets in Resources */,
+				4FAD4F3E1BFC08F200E5A736 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAD4F471BFC08F300E5A736 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F58908C1BFC17F200352003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5890931BFC17F200352003 /* TMValidatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAD4F2C1BFC08F200E5A736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAD4F841BFC092A00E5A736 /* TMValidateTextField.m in Sources */,
+				4FAD4F8E1BFC092A00E5A736 /* TMValidatorRuleIsNumeric.m in Sources */,
+				4FAD4F941BFC092A00E5A736 /* TMValidatorRuleNumericMax.m in Sources */,
+				4FAD4F8B1BFC092A00E5A736 /* TMValidatorRuleIsAlnum.m in Sources */,
+				4FAD4F851BFC092A00E5A736 /* TMValidateTextView.m in Sources */,
+				4FAD4F3B1BFC08F200E5A736 /* ViewController.m in Sources */,
+				4FAD4F881BFC092A00E5A736 /* TMValidatorRule.m in Sources */,
+				4FAD4F871BFC092A00E5A736 /* TMValidatorField.m in Sources */,
+				4FAD4F931BFC092A00E5A736 /* TMValidatorRuleNumericBetween.m in Sources */,
+				4FAD4F911BFC092A00E5A736 /* TMValidatorRuleMaxLength.m in Sources */,
+				4F58909C1BFC2AE200352003 /* TMValidatorRuleURL.m in Sources */,
+				4FAD4F921BFC092A00E5A736 /* TMValidatorRuleMinLength.m in Sources */,
+				4FAD4F381BFC08F200E5A736 /* AppDelegate.m in Sources */,
+				4FAD4F8F1BFC092A00E5A736 /* TMValidatorRuleMatchPattern.m in Sources */,
+				4FAD4F351BFC08F200E5A736 /* main.m in Sources */,
+				4FAD4F8A1BFC092A00E5A736 /* TMValidatorRuleExactLength.m in Sources */,
+				4FAD4F951BFC092A00E5A736 /* TMValidatorRuleNumericMin.m in Sources */,
+				4FAD4F891BFC092A00E5A736 /* TMValidatorRuleEmail.m in Sources */,
+				4FAD4F8C1BFC092A00E5A736 /* TMValidatorRuleIsAlphabet.m in Sources */,
+				4FAD4F961BFC092A00E5A736 /* TMValidatorRuleRequired.m in Sources */,
+				4FAD4F861BFC092A00E5A736 /* TMValidator.m in Sources */,
+				4FAD4F8D1BFC092A00E5A736 /* TMValidatorRuleIsEmpty.m in Sources */,
+				4FAD4F901BFC092A00E5A736 /* TMValidatorRuleMatchValue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAD4F451BFC08F300E5A736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAD4F4E1BFC08F300E5A736 /* TMValidatorDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F5890961BFC17F200352003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FAD4F2F1BFC08F200E5A736 /* TMValidatorDemo */;
+			targetProxy = 4F5890951BFC17F200352003 /* PBXContainerItemProxy */;
+		};
+		4FAD4F4B1BFC08F300E5A736 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FAD4F2F1BFC08F200E5A736 /* TMValidatorDemo */;
+			targetProxy = 4FAD4F4A1BFC08F300E5A736 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4FAD4F3C1BFC08F200E5A736 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FAD4F3D1BFC08F200E5A736 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4FAD4F411BFC08F200E5A736 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FAD4F421BFC08F200E5A736 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4FAD4F591BFC092A00E5A736 /* TMValidatorError.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FAD4F5A1BFC092A00E5A736 /* en */,
+				4FAD4F5B1BFC092A00E5A736 /* ja */,
+			);
+			name = TMValidatorError.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F5890981BFC17F200352003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TMValidatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timers-inc.TMValidatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMValidatorDemo.app/TMValidatorDemo";
+			};
+			name = Debug;
+		};
+		4F5890991BFC17F200352003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TMValidatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timers-inc.TMValidatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMValidatorDemo.app/TMValidatorDemo";
+			};
+			name = Release;
+		};
+		4FAD4F501BFC08F300E5A736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FAD4F511BFC08F300E5A736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FAD4F531BFC08F300E5A736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TMValidatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timers-inc.TMValidatorDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4FAD4F541BFC08F300E5A736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TMValidatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timers-inc.TMValidatorDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4FAD4F561BFC08F300E5A736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TMValidatorDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timers-inc.TMValidatorDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMValidatorDemo.app/TMValidatorDemo";
+			};
+			name = Debug;
+		};
+		4FAD4F571BFC08F300E5A736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TMValidatorDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timers-inc.TMValidatorDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMValidatorDemo.app/TMValidatorDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F5890971BFC17F200352003 /* Build configuration list for PBXNativeTarget "TMValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5890981BFC17F200352003 /* Debug */,
+				4F5890991BFC17F200352003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FAD4F2B1BFC08F200E5A736 /* Build configuration list for PBXProject "TMValidatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FAD4F501BFC08F300E5A736 /* Debug */,
+				4FAD4F511BFC08F300E5A736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FAD4F521BFC08F300E5A736 /* Build configuration list for PBXNativeTarget "TMValidatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FAD4F531BFC08F300E5A736 /* Debug */,
+				4FAD4F541BFC08F300E5A736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FAD4F551BFC08F300E5A736 /* Build configuration list for PBXNativeTarget "TMValidatorDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FAD4F561BFC08F300E5A736 /* Debug */,
+				4FAD4F571BFC08F300E5A736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FAD4F281BFC08F200E5A736 /* Project object */;
+}
