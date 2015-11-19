@@ -79,6 +79,7 @@
 {
     BOOL result = YES;
     TMValidatorRule *rule;
+    self.errors = [NSMutableArray array];
     for (int i = 0; i < self.rules.count; i++)
     {
         rule = [self.rules objectAtIndex:i];
