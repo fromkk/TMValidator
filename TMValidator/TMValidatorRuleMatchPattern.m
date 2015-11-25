@@ -31,10 +31,10 @@
 
 - (BOOL)run:(NSString *)string
 {
-    return [[self class] run:string withPattern:self.pattern];
+    return [[self class] run:string withPattern:self.pattern matches:nil];
 }
 
-+ (BOOL)run:(NSString *)string withPattern:(NSString *)pattern
++ (BOOL)run:(NSString *)string withPattern:(NSString *)pattern matches:(void (^)(NSArray *))matches
 {
     if ([TMValidatorRuleIsEmpty run:string])
     {
@@ -48,14 +48,42 @@
     }
     
     NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                                           options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators
+                                                                             error:&error];
     if (error)
     {
         NSLog(@"%@ %s %d", error, __FUNCTION__, __LINE__);
         return NO;
     }
     
-    return 0 < [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    BOOL valid = 0 < [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    
+    if (nil != matches)
+    {
+        NSMutableArray *result = [NSMutableArray array];
+        NSTextCheckingResult *match = [regex firstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
+        if (match)
+        {
+            NSRange range;
+            NSString *matchedString;
+            for (int i = 0; i < match.numberOfRanges; i++)
+            {
+                range = [match rangeAtIndex:i];
+                matchedString = [string substringWithRange:range];
+                [result addObject:matchedString];
+            }
+        }
+        
+        matches(result);
+    }
+    
+    return valid;
+}
+
++ (BOOL)run:(NSString *)string withPattern:(NSString *)pattern
+{
+    return [self run:string withPattern:pattern matches:nil];
 }
 
 - (NSString *)errorMessageWithLabel:(NSString *)label

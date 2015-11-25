@@ -273,6 +273,24 @@
     XCTAssertFalse([TMValidatorRuleURL run:@"http://10.1.1.254"], @"url is http://10.1.1.254");
 }
 
+- (void)testMatchPatter
+{
+    NSString *pattern = @"^([0-9]{4})[/\\.\\-]{1}([0-9]{1,2})[/\\.\\-]{1}([0-9]{1,2})$";
+    
+    XCTAssert([TMValidatorRuleMatchPattern run:@"2015/11/30" withPattern:pattern matches:^(NSArray *matches) {
+        NSLog(@"%@", matches);
+    }]);
+    XCTAssert([TMValidatorRuleMatchPattern run:@"2015.11.30" withPattern:pattern matches:^(NSArray *matches) {
+        NSLog(@"%@", matches);
+    }]);
+    XCTAssert([TMValidatorRuleMatchPattern run:@"2015-11-30" withPattern:pattern matches:^(NSArray *matches) {
+        NSLog(@"%@", matches);
+    }]);
+    XCTAssertFalse([TMValidatorRuleMatchPattern run:@"2015+11+30" withPattern:pattern matches:^(NSArray *matches) {
+        NSLog(@"%@", matches);
+    }]);
+}
+
 - (void)testValidatorRun
 {
     TMValidator *validator = [TMValidator validator];

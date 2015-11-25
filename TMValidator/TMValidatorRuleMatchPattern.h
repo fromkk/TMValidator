@@ -15,5 +15,6 @@
 + (instancetype)ruleWithPattern:(NSString *)pattern;
 + (BOOL)run:(NSString *)string UNAVAILABLE_ATTRIBUTE;
 + (BOOL)run:(NSString *)string withPattern:(NSString *)pattern;
++ (BOOL)run:(NSString *)string withPattern:(NSString *)pattern matches:(void (^)(NSArray *matches))matches;
 
 @end
