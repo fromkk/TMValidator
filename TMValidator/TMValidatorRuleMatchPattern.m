@@ -24,8 +24,14 @@
 
 + (instancetype)ruleWithPattern:(NSString *)pattern
 {
+    return [self ruleWithPattern:pattern andErrorMessage:nil];
+}
+
++ (instancetype)ruleWithPattern:(NSString *)pattern andErrorMessage:(NSString *)errorMessage
+{
     TMValidatorRuleMatchPattern *instance = [self rule];
     instance.pattern = pattern;
+    instance.errorMessage = errorMessage;
     return instance;
 }
 
@@ -88,13 +94,18 @@
 
 - (NSString *)errorMessageWithLabel:(NSString *)label
 {
+    if (nil != self.errorMessage && 0 < self.errorMessage.length)
+    {
+        return self.errorMessage;
+    }
+    
     NSString *format = NSLocalizedStringFromTable(@"tm.validator.matchPattern", @"TMValidatorError", @"matchPattern");
     return [NSString stringWithFormat:format, label, self.pattern];
 }
 
 - (void)dealloc
 {
-    self.pattern = nil;
+    _pattern = nil;
 }
 
 - (NSString *)description

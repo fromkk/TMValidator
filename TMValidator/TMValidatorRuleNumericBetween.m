@@ -25,9 +25,15 @@
 
 + (instancetype)ruleWithNumericMin:(NSNumber *)numericMin andNumericMax:(NSNumber *)numericMax
 {
+    return [self ruleWithNumericMin:numericMin andNumericMax:numericMax andErrorMessagae:nil];
+}
+
++ (instancetype)ruleWithNumericMin:(NSNumber *)numericMin andNumericMax:(NSNumber *)numericMax andErrorMessagae:(NSString *)errorMessage
+{
     TMValidatorRuleNumericBetween *instance = [self rule];
     instance.numericMin = numericMin;
     instance.numericMax = numericMax;
+    instance.errorMessage = errorMessage;
     return  instance;
 }
 
@@ -64,14 +70,19 @@
 
 - (NSString *)errorMessageWithLabel:(NSString *)label
 {
+    if (nil != self.errorMessage && 0 < self.errorMessage.length)
+    {
+        return self.errorMessage;
+    }
+    
     NSString *format = NSLocalizedStringFromTable(@"tm.validator.numericBetween", @"TMValidatorError", @"numericBetween");
     return [NSString stringWithFormat:format, label, self.numericMin, self.numericMax];
 }
 
 - (void)dealloc
 {
-    self.numericMin = nil;
-    self.numericMax = nil;
+    _numericMin = nil;
+    _numericMax = nil;
 }
 
 - (NSString *)description

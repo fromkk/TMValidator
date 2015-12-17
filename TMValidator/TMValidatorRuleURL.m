@@ -41,6 +41,11 @@
 
 - (NSString *)errorMessageWithLabel:(NSString *)label
 {
+    if (nil != self.errorMessage && 0 < self.errorMessage.length)
+    {
+        return self.errorMessage;
+    }
+    
     NSString *format = NSLocalizedStringFromTable(@"tm.validator.url", @"TMValidatorError", @"url");
     return [NSString stringWithFormat:format, label];
 }

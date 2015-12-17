@@ -40,6 +40,11 @@
 
 - (NSString *)errorMessageWithLabel:(NSString *)label
 {
+    if (nil != self.errorMessage && 0 < self.errorMessage.length)
+    {
+        return self.errorMessage;
+    }
+    
     NSString *format = NSLocalizedStringFromTable(@"tm.validator.isAlphabet", @"TMValidatorError", @"isAlphabet");
     return [NSString stringWithFormat:format, label];
 }

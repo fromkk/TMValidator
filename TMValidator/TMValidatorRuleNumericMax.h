@@ -10,10 +10,12 @@
 
 @interface TMValidatorRuleNumericMax : TMValidatorRule
 
-@property (nonatomic) NSNumber *numeric;
+@property (nonatomic) NSNumber * _Nonnull numeric;
 
-+ (instancetype)ruleWithNumeric:(NSNumber *)numeric;
-+ (BOOL)run:(NSString *)string UNAVAILABLE_ATTRIBUTE;
-+ (BOOL)run:(NSString *)string withNumeric:(NSNumber *)numeric;
++ (instancetype _Nonnull)ruleWithErrorMessage:(NSString * _Nullable)errorMessage UNAVAILABLE_ATTRIBUTE;
++ (instancetype _Nonnull)ruleWithNumeric:(NSNumber * _Nonnull)numeric;
++ (instancetype _Nonnull)ruleWithNumeric:(NSNumber * _Nonnull)numeric andErrorMessage:(NSString * _Nullable)errorMessage;
++ (BOOL)run:(NSString * _Nullable)string UNAVAILABLE_ATTRIBUTE;
++ (BOOL)run:(NSString * _Nullable)string withNumeric:(NSNumber * _Nonnull)numeric;
 
 @end

@@ -10,10 +10,12 @@
 
 @interface TMValidatorRuleMatchValue : TMValidatorRule
 
-@property (nonatomic) NSString *value;
+@property (nonatomic) NSString * _Nonnull value;
 
-+ (instancetype)ruleWithValue:(NSString *)value;
-+ (BOOL)run:(NSString *)string UNAVAILABLE_ATTRIBUTE;
-+ (BOOL)run:(NSString *)string withValue:(NSString *)value;
++ (instancetype _Nonnull)ruleWithErrorMessage:(NSString * _Nullable)errorMessage UNAVAILABLE_ATTRIBUTE;
++ (instancetype _Nonnull)ruleWithValue:(NSString * _Nonnull)value;
++ (instancetype _Nonnull)ruleWithValue:(NSString * _Nonnull)value andErrorMessage:(NSString * _Nullable)errorMessage;
++ (BOOL)run:(NSString * _Nullable)string UNAVAILABLE_ATTRIBUTE;
++ (BOOL)run:(NSString * _Nullable)string withValue:(NSString * _Nullable)value;
 
 @end

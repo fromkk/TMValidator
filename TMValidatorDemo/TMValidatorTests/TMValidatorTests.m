@@ -316,4 +316,14 @@
     }], @"run");
 }
 
+- (void)testCustomMessage
+{
+    TMValidator *validator = [TMValidator validator];
+    
+    [validator addField:[[TMValidatorField requiredFieldWithValue:@"ABC" andLabel:nil andElement:nil] addRule:[TMValidatorRuleEmail ruleWithErrorMessage:@"email is invalid"]]];
+    
+    [validator run];
+    XCTAssertEqual([[[[[validator fields] firstObject] errors] firstObject] localizedDescription], @"email is invalid");
+}
+
 @end

@@ -25,8 +25,14 @@
 
 + (instancetype)ruleWithNumeric:(NSNumber *)numeric
 {
+    return [self ruleWithNumeric:numeric andErrorMessage:nil];
+}
+
++ (instancetype)ruleWithNumeric:(NSNumber *)numeric andErrorMessage:(NSString *)errorMessage
+{
     TMValidatorRuleNumericMin *instance = [self rule];
     instance.numeric = numeric;
+    instance.errorMessage = errorMessage;
     return  instance;
 }
 
@@ -61,13 +67,18 @@
 
 - (NSString *)errorMessageWithLabel:(NSString *)label
 {
+    if (nil != self.errorMessage && 0 < self.errorMessage.length)
+    {
+        return self.errorMessage;
+    }
+    
     NSString *format = NSLocalizedStringFromTable(@"tm.validator.numericMin", @"TMValidatorError", @"numericMin");
     return [NSString stringWithFormat:format, label, self.numeric];
 }
 
 - (void)dealloc
 {
-    self.numeric = nil;
+    _numeric = nil;
 }
 
 - (NSString *)description

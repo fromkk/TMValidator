@@ -17,15 +17,15 @@
 @property (nonatomic) NSString *label;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
-- (instancetype)initWithRules:(NSArray *)rules;
+- (instancetype)initWithRules:(NSArray<__kindof TMValidatorRule *> *)rules;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder UNAVAILABLE_ATTRIBUTE;
-- (instancetype)initWithCoder:(NSCoder *)aDecoder andRules:(NSArray *)rules;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder andRules:(NSArray<__kindof TMValidatorRule *> *)rules;
 - (instancetype)initWithFrame:(CGRect)frame UNAVAILABLE_ATTRIBUTE;
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer UNAVAILABLE_ATTRIBUTE;
-- (instancetype)initWithFrame:(CGRect)frame andRules:(NSArray *)rules;
-- (instancetype)addRule:(TMValidatorRule *)rule;
-- (instancetype)addRules:(NSArray *)rules;
+- (instancetype)initWithFrame:(CGRect)frame andRules:(NSArray<__kindof TMValidatorRule *> *)rules;
+- (instancetype)addRule:(__kindof TMValidatorRule *)rule;
+- (instancetype)addRules:(NSArray<__kindof TMValidatorRule *> *)rules;
 - (BOOL)valid;
-- (NSArray *)errors;
+- (NSArray <NSError *> *)errors;
 
 @end

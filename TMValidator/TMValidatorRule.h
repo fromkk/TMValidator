@@ -11,21 +11,24 @@
 
 @protocol TMValidatorRuleProtocol <NSObject>
 
-- (NSString *)errorMessageWithLabel:(NSString *)label;
+- (NSString * _Nonnull)errorMessageWithLabel:(NSString * _Nullable)label;
 
 @optional
-- (BOOL)run:(NSString *)string;
-+ (BOOL)run:(NSString *)string;
+- (BOOL)run:(NSString * _Nullable)string;
++ (BOOL)run:(NSString * _Nullable)string;
 
 @end
 
 @interface TMValidatorRule : NSObject <TMValidatorRuleProtocol>
 {
     TMValidatorErrorCode _errorCode;
+    NSString *_errorMessage;
 }
 
-+ (instancetype)rule;
++ (instancetype _Nonnull)rule;
++ (instancetype _Nonnull)ruleWithErrorMessage:(NSString * _Nullable)errorMessage;
 
 @property (nonatomic, readonly) TMValidatorErrorCode errorCode;
+@property (nonatomic) NSString * _Nullable errorMessage;
 
 @end

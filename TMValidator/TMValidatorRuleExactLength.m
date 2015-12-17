@@ -24,8 +24,14 @@
 
 + (instancetype)ruleWithLength:(NSNumber *)length
 {
+    return [self ruleWithLength:length andErrorMessage:nil];
+}
+
++ (instancetype)ruleWithLength:(NSNumber *)length andErrorMessage:(NSString *)errorMessage
+{
     TMValidatorRuleExactLength *instance = [self rule];
     instance.length = length;
+    instance.errorMessage = errorMessage;
     return instance;
 }
 
@@ -52,13 +58,18 @@
 
 - (NSString *)errorMessageWithLabel:(NSString *)label
 {
+    if (nil != self.errorMessage && 0 < self.errorMessage.length)
+    {
+        return self.errorMessage;
+    }
+    
     NSString *format = NSLocalizedStringFromTable(@"tm.validator.exactLength", @"TMValidatorError", @"exactLength");
     return [NSString stringWithFormat:format, label, self.length];
 }
 
 - (void)dealloc
 {
-    self.length = nil;
+    _length = nil;
 }
 
 - (NSString *)description

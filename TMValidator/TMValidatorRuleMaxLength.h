@@ -10,10 +10,12 @@
 
 @interface TMValidatorRuleMaxLength : TMValidatorRule
 
-@property (nonatomic) NSNumber *length;
+@property (nonatomic) NSNumber * _Nonnull length;
 
-+ (instancetype)ruleWithLength:(NSNumber *)length;
-+ (BOOL)run:(NSString *)string UNAVAILABLE_ATTRIBUTE;
-+ (BOOL)run:(NSString *)string withLength:(NSNumber *)length;
++ (instancetype _Nonnull)ruleWithErrorMessage:(NSString * _Nullable)errorMessage UNAVAILABLE_ATTRIBUTE;
++ (instancetype _Nonnull)ruleWithLength:(NSNumber * _Nonnull)length;
++ (instancetype _Nonnull)ruleWithLength:(NSNumber * _Nonnull)length andErrorMessage:(NSString * _Nullable)errorMessage;
++ (BOOL)run:(NSString * _Nullable)string UNAVAILABLE_ATTRIBUTE;
++ (BOOL)run:(NSString * _Nullable)string withLength:(NSNumber * _Nonnull)length;
 
 @end

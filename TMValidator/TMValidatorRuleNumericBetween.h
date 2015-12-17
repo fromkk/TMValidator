@@ -10,11 +10,13 @@
 
 @interface TMValidatorRuleNumericBetween : TMValidatorRule
 
-@property (nonatomic) NSNumber *numericMin;
-@property (nonatomic) NSNumber *numericMax;
+@property (nonatomic) NSNumber * _Nonnull numericMin;
+@property (nonatomic) NSNumber * _Nonnull numericMax;
 
-+ (instancetype)ruleWithNumericMin:(NSNumber *)numericMin andNumericMax:(NSNumber *)numericMax;
-+ (BOOL)run:(NSString *)string UNAVAILABLE_ATTRIBUTE;
-+ (BOOL)run:(NSString *)string withNumericMin:(NSNumber *)numericMin andNumericMax:(NSNumber *)numericMax;
++ (instancetype _Nonnull)ruleWithErrorMessage:(NSString * _Nullable)errorMessage UNAVAILABLE_ATTRIBUTE;
++ (instancetype _Nonnull)ruleWithNumericMin:(NSNumber * _Nonnull)numericMin andNumericMax:(NSNumber * _Nonnull)numericMax;
++ (instancetype _Nonnull)ruleWithNumericMin:(NSNumber * _Nonnull)numericMin andNumericMax:(NSNumber * _Nonnull)numericMax andErrorMessagae:(NSString * _Nullable)errorMessage;
++ (BOOL)run:(NSString * _Nullable)string UNAVAILABLE_ATTRIBUTE;
++ (BOOL)run:(NSString * _Nullable)string withNumericMin:(NSNumber * _Nonnull)numericMin andNumericMax:(NSNumber * _Nonnull)numericMax;
 
 @end

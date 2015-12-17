@@ -20,8 +20,8 @@
 + (instancetype)fieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(UIView *)element;
 + (instancetype)fieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(UIView *)element andRules:(NSArray *)rules;
 + (instancetype)requiredFieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(UIView *)element;
-- (instancetype)addRule:(TMValidatorRule *)rule;
-- (instancetype)addRules:(NSArray *)rules;
+- (instancetype)addRule:(__kindof TMValidatorRule *)rule;
+- (instancetype)addRules:(NSArray <__kindof TMValidatorRule *> *)rules;
 - (BOOL)run;
 
 @end
