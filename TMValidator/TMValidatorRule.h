@@ -30,5 +30,6 @@
 
 @property (nonatomic, readonly) TMValidatorErrorCode errorCode;
 @property (nonatomic) NSString * _Nullable errorMessage;
+@property (nonatomic) NSDictionary * _Nullable userInfo;
 
 @end
