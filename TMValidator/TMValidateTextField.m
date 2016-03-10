@@ -51,8 +51,6 @@
     if (!_field)
     {
         _field = [TMValidatorField fieldWithValue:self.text andLabel:self.label andElement:self];
-        [self addTarget:self action:@selector(textDidChanged:) forControlEvents:UIControlEventEditingChanged];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChanged:) name:UITextFieldTextDidChangeNotification object:self];
     }
 }
 
@@ -65,16 +63,11 @@
 - (void)setText:(NSString *)text
 {
     [super setText:text];
-    _field.value = text;
-}
-
-- (void)textDidChanged:(NSNotification *)notif
-{
-    _field.value = self.text;
 }
 
 - (BOOL)valid
 {
+    _field.value = self.text;
     return [_field run];
 }
 
@@ -99,7 +92,6 @@
 {
     _label = nil;
     _field = nil;
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:self];
 }
 
 @end

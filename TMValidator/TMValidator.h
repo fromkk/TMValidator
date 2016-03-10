@@ -27,13 +27,15 @@
 
 @interface TMValidator : NSObject
 
-@property (nonatomic) NSMutableArray *fields;
+@property (nonatomic, readonly) NSMutableArray * _Nonnull fields;
 
-+ (instancetype)validator;
++ (instancetype _Nonnull)validator;
 
-- (instancetype)addField:(TMValidatorField *)field;
-- (BOOL)runWithSuccesses:(void (^)(NSArray *successes))success andFailure:(void (^)(NSArray *errors))failure;
-- (BOOL)runWithFailure:(void (^)(NSArray *errors))failure;
+- (instancetype _Nonnull)addField:(__kindof TMValidatorField * _Nonnull)field;
+- (instancetype _Nonnull)addFields:(NSArray <__kindof TMValidatorField * > * _Nonnull)fields;
+- (BOOL)runWithSuccesses:(void (^ _Nullable)(NSArray <__kindof TMValidatorField *> * _Nonnull successes))success andFailure:(void (^ _Nullable)(NSArray <__kindof TMValidatorField *> * _Nullable errors))failure;
+- (BOOL)runWithFailure:(void (^ _Nullable)(NSArray <__kindof TMValidatorField *> * _Nullable errors))failure;
 - (BOOL)run;
+- (NSArray <NSError *> * _Nonnull)errors;
 
 @end

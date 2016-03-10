@@ -14,12 +14,12 @@
 @property (nonatomic) NSString *label;
 @property (nonatomic) NSString *value;
 @property (nonatomic) UIView *element;
-@property (nonatomic) NSMutableArray *rules;
-@property (nonatomic) NSMutableArray *errors;
+@property (nonatomic) NSMutableArray <__kindof TMValidatorRule *> *rules;
+@property (nonatomic) NSMutableArray <NSError *> *errors;
 
-+ (instancetype)fieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(UIView *)element;
-+ (instancetype)fieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(UIView *)element andRules:(NSArray *)rules;
-+ (instancetype)requiredFieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(UIView *)element;
++ (instancetype)fieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(__kindof UIView *)element;
++ (instancetype)fieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(__kindof UIView *)element andRules:(NSArray <TMValidatorRule *> *)rules;
++ (instancetype)requiredFieldWithValue:(NSString *)value andLabel:(NSString *)label andElement:(__kindof UIView *)element;
 - (instancetype)addRule:(__kindof TMValidatorRule *)rule;
 - (instancetype)addRules:(NSArray <__kindof TMValidatorRule *> *)rules;
 - (BOOL)run;

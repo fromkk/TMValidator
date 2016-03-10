@@ -8,6 +8,12 @@
 
 #import "TMValidator.h"
 
+@interface TMValidator ()
+
+@property (nonatomic, readwrite) NSMutableArray * fields;
+
+@end
+
 @implementation TMValidator
 
 + (instancetype)validator
@@ -36,7 +42,17 @@
     return self;
 }
 
-- (BOOL)runWithSuccesses:(void (^)(NSArray *))success andFailure:(void (^)(NSArray *))failure
+- (instancetype)addFields:(NSArray<__kindof TMValidatorField *> *)fields
+{
+    for (TMValidatorField *field in fields)
+    {
+        [self addField:field];
+    }
+    
+    return self;
+}
+
+- (BOOL)runWithSuccesses:(void (^)(NSArray <__kindof TMValidatorField *> *))success andFailure:(void (^)(NSArray <__kindof TMValidatorField *> *))failure
 {
     NSMutableArray *successes = [NSMutableArray array];
     NSMutableArray *errors    = [NSMutableArray array];
@@ -68,7 +84,7 @@
     return result;
 }
 
-- (BOOL)runWithFailure:(void (^)(NSArray *))failure
+- (BOOL)runWithFailure:(void (^)(NSArray <__kindof TMValidatorField *> *))failure
 {
     return [self runWithSuccesses:nil andFailure:failure];
 }
@@ -78,9 +94,22 @@
     return [self runWithSuccesses:nil andFailure:nil];
 }
 
+- (NSArray <NSError *> *)errors
+{
+    NSMutableArray *errors = [NSMutableArray array];
+    for (TMValidatorField *field in self.fields)
+    {
+        if (!field.run)
+        {
+            [errors addObjectsFromArray:field.errors];
+        }
+    }
+    return errors;
+}
+
 - (void)dealloc
 {
-    self.fields = nil;
+    _fields = nil;
 }
 
 - (NSString *)description

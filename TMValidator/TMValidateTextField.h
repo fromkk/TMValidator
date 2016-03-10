@@ -10,11 +10,9 @@
 #import "TMValidator.h"
 
 @interface TMValidateTextField : UITextField
-{
-    TMValidatorField *_field;
-}
 
 @property (nonatomic) NSString *label;
+@property (nonatomic, readonly) TMValidatorField *field;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 - (instancetype)initWithRules:(NSArray<__kindof TMValidatorRule *> *)rules;

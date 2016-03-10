@@ -51,13 +51,7 @@
     if (!_field)
     {
         _field = [TMValidatorField fieldWithValue:self.text andLabel:self.label andElement:self];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextViewTextDidChangeNotification object:self];
     }
-}
-
-- (void)textDidChanged:(NSNotification *)notif
-{
-    _field.value = self.text;
 }
 
 - (void)setLabel:(NSString *)label
@@ -66,19 +60,9 @@
     _field.label = _label;
 }
 
-- (void)setText:(NSString *)text
-{
-    [super setText:text];
-    _field.value = text;
-}
-
-- (void)textDidChange:(id)sender
-{
-    _field.value = self.text;
-}
-
 - (BOOL)valid
 {
+    _field.value = self.text;
     return [_field run];
 }
 
@@ -103,7 +87,6 @@
 {
     _label = nil;
     _field = nil;
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextViewTextDidChangeNotification object:self];
 }
 
 @end
