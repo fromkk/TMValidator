@@ -90,10 +90,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TMValidator", "TMValidator/*.{h,m}"
+  s.source_files  = "Sources", "Sources/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "TMValidator/*.h"
+  s.public_header_files = "Sources/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-  s.resources = "TMValidator/**/*.strings"
+  s.resources = "Sources/**/*.strings"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
