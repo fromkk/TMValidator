@@ -13,7 +13,7 @@
 
 @property (nonatomic) NSString *label;
 @property (nonatomic) NSString *value;
-@property (nonatomic) UIView *element;
+@property (nonatomic, weak) UIView *element;
 @property (nonatomic) NSMutableArray <__kindof TMValidatorRule *> *rules;
 @property (nonatomic) NSMutableArray <NSError *> *errors;
 
